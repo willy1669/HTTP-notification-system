@@ -4,7 +4,16 @@
   "description": "A server (or set of servers) will keep track of topics ->",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run prod",
+    "prod": "./node_modules/.bin/cross-env NODE_ENV=production npm run build && node -r dotenv/config dist/notificationServer.js",
+    "dev": "./node_modules/.bin/cross-env NODE_ENV=development npm run build && node -r dotenv/config dist/notificationServer.js",
+    "build": "babel server -d dist",
+    "lint": "eslint \"server/*.js\" --fix",
+    "lint:prettier": "prettier --check \"**/*{md,js,json,ts}\"",
+    "format": "prettier --write \"**/*{md,js,json,ts}\"",
+    "audit:dependecies": "yarn audit",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -17,9 +26,23 @@
   },
   "homepage": "https://github.com/willy1669/HTTP-notification-system#readme",
   "dependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.4",
+    "@babel/plugin-transform-runtime": "^7.11.0",
+    "@babel/polyfill": "^7.10.4",
+    "@babel/preset-env": "^7.11.5",
+    "async": "^3.2.0",
     "babel-plugin-dotenv": "^0.1.1",
+    "babel-plugin-inline-dotenv": "^1.6.0",
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "cross-env": "^7.0.3",
+    "crypto-es": "^1.2.6",
+    "esm": "^3.2.25",
     "express": "^4.17.1",
     "helmet": "^4.4.1",
-    "mongoose": "^5.11.19"
+    "mongoose": "^5.11.19",
+    "pino": "^6.11.1",
+    "snyk": "^1.437.3"
   }
 }
