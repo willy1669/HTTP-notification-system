@@ -1,0 +1,25 @@
+{
+  "name": "http-notification-system",
+  "version": "1.0.0",
+  "description": "A server (or set of servers) will keep track of topics ->",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/willy1669/HTTP-notification-system.git"
+  },
+  "author": "Chinonso Williams",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/willy1669/HTTP-notification-system/issues"
+  },
+  "homepage": "https://github.com/willy1669/HTTP-notification-system#readme",
+  "dependencies": {
+    "babel-plugin-dotenv": "^0.1.1",
+    "express": "^4.17.1",
+    "helmet": "^4.4.1",
+    "mongoose": "^5.11.19"
+  }
+}
