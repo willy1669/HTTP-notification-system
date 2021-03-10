@@ -3,7 +3,8 @@ import express from 'express';
 import helmet from 'helmet';
 import bodyParser from 'body-parser';
 import compression from 'compression'
-import trimmer from './middlewares/trimmer.js'
+import {trimmer} from './middlewares/trimmer.js'
+import subscriberRoute from './routes/subscriber.js'
 
 // Instantiate express server
 const app = express();
@@ -21,5 +22,10 @@ app.use(compression());
 
 // removes whitespace from payload
 app.use(trimmer);
+
+const baseUrl = "/api/v1/";
+
+/** Routes with base URl */
+app.use(`${baseUrl}subscribe/:topic`, subscriberRoute);
 
 export default app;
