@@ -25,6 +25,12 @@ yarn start
 navigate to localhost:9000 to start the application
 ```
 
+### API
+- Thought to use api versioning
+* http://localhost:8000/api/v1/subscribe/:topic
+* http://localhost:8000/api/v1/publish/:topic
+
+
 ## Testing
 
 ## Technologies
