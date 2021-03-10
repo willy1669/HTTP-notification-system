@@ -7,7 +7,6 @@ const { String } = Schema.Types;
 const subscriberSchema = new Schema({
     url: {
         String,
-        required: true,
     },
     topic: {String},
 })
