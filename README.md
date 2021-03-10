@@ -22,7 +22,7 @@ touch .env
 yarn start
 
 #View the application
-navigate to localhost:9000 to view the application
+navigate to localhost:9000 to start the application
 ```
 
 ## Testing
@@ -37,7 +37,7 @@ navigate to localhost:9000 to view the application
 - [MongooseORM](https://mongoosejs.com/) Elegant mongodb object modeling for node.js
 - [Pino](https://www.npmjs.com/package/pino) Production logging and benchmarking for node.js
 - [Helmet](https://helmetjs.github.io/) Express.js security with HTTP headers
-- [Snyk](https://snyk.io/) Security Across the Cloud Native Application Stack
+- [Snyk](https://snyk.io/) Security Across the Cloud Native Application Stack and dependency management
 
 #### Linter
 
