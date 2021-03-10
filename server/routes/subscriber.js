@@ -5,8 +5,8 @@ import { createSubscription } from '../controllers/subscriber.js';
 const { Router } = pkg;
 
 //Instantiate express router
-const subscriptionRoute = Router();
+const subscriberRoute = Router();
 
-subscriptionRoute.post(createSubscription);
+subscriberRoute.post(createSubscription);
 
-export default subscriptionRoute;
+export default subscriberRoute;

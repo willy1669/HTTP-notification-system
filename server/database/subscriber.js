@@ -1,6 +1,6 @@
 'use strict';
-import subscriberModel from '../models/subscriber';
-import topicModel from '../models/topic';
+import subscriberModel from './models/subscriber';
+import topicModel from './models/topic';
 
 export const subscriber = async (url, topic) => {
     const result = await topicModel.findOne({topic});
